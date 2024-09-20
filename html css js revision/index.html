@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUD Subject</title>
+    <link rel="stylesheet" href="subjects.css">
+</head>
+<body>
+    <h1>Table of Subjects</h1>
+    <div class="container">
+        <div class="left">
+            <form id="subjectForm">
+                <input type="text" id="SubjectName" placeholder="Enter a new subject name" required>
+                <br>
+                <input type="number" id="NumberOfEcts" placeholder="Enter the number of ECTS points" required>
+                <br>
+                <input type="text" id="DepartmentId" placeholder="Enter the department id" required>
+                <br>
+                <input type="datetime-local" id="TimeCreated" placeholder="Enter the time of creation" required>
+                <br>
+                <button type="submit">Add</button>
+            </form>
+        </div>
+
+        <div class="right">
+            <table title="Subject Info">
+                <thead>
+                    <tr> <th>Id</th><th>Name</th><th>Number Of ECTS</th><th>Department Id</th><th>Time Created</th><th>Action</th> </tr>
+                </thead>
+                <tbody id="subjectTableBody"></tbody>          
+            </table>
+        </div>
+    </div>
+
+    <script src="subjects.js"></script>
+    <script>refreshTable()</script>
+</body>
+</html>
